@@ -19,7 +19,10 @@ services:
   app:
     # Build the Docker image from the Dockerfile in this directory.
     # Use --build flag to force a rebuild after changing source files.
-    build: .
+    build: . 
+    
+    volumes:
+      - ./public:/app/public
 
     # Port mapping: HOST:CONTAINER
     #   Left  (8080) = port on YOUR laptop → visit http://localhost:8080
